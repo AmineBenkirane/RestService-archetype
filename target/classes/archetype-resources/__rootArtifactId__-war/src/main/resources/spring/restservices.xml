@@ -1,0 +1,25 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxrs.xsd ">
+	
+	<!-- dao -->
+	<import resource="classpath*:spring/person-dao-applicationContext.xml"/>
+	
+	<!-- service -->
+	<import resource="classpath*:spring/person-service-applicationContext.xml" />
+	
+	<!-- transforemrs -->
+	<import resource="classpath*:spring/person-transformers-applicationContext.xml" />
+	
+	<!-- Rest Service -->
+	<import resource="classpath*:spring/jax-rs-person-services-context.xml" />
+	<import resource="classpath*:spring/personrestservice-applicationContext.xml" />	
+	
+</beans>
